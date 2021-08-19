@@ -1,4 +1,4 @@
-# OHMYFOOD ! - Openclessrooms formation développeur web - Projet 3
+# OHMYFOOD ! Openclessrooms formation développeur web - Projet 3
 
 ## Scénario
 
