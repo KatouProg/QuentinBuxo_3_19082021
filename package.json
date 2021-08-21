@@ -1,0 +1,20 @@
+{
+  "name": "ohmyfood_p3_quentinbuxo",
+  "version": "1.0.0",
+  "description": "projet 3 formation openclassrooms dev_web",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatouProg/QuentinBuxo_3_19082021.git"
+  },
+  "author": "Quentin BUXO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatouProg/QuentinBuxo_3_19082021/issues"
+  },
+  "homepage": "https://github.com/KatouProg/QuentinBuxo_3_19082021#readme"
+}
