@@ -4,101 +4,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood!</title>
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./.public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>Ohmyfood! - Homepage</title>
 </head>
 <body>
-    <header>
-        <h1ohmyfood</h1>
-        <p>Paris, Belleville</p>
+    <div class="loadingAnimation"></div>
+    <header class="header">
+        <h1>ohmyfood</h1>
+        <div class="localisation">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Paris, Belleville</p>
+        </div>
     </header>
-    <main>
-        <section>
+    <main class="main">
+        <section class="intro intro--mobile">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <a href="#" class="button">Explorer nos restaurants</a>
         </section>
         <section>
             <h2>Fonctionnement</h2>
-            <div>
-                <div>
-                    <p>1</p>
-                    <i></i>
-                    <p>Choisissez un restaurant</p>
-                </div>
-                <div>
-                    <p>2</p>
-                    <i></i>
-                    <p>Composez votre menu</p>
-                </div>
-                <div>
-                    <p>3</p>
-                    <i></i>
-                    <p>Dégustez au restaurant</p>
-                </div>
-            </div>
+            <ol>
+                <li>
+                    <p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-list-ul"></i>Composez votre menu</p>
+                </li>
+                <li>
+                    <p><i class="fas fa-store"></i>Dégustez au restaurant</p>
+                </li>
+            </ol>
         </section>
         <section>
             <h2>Restaurants</h2>
-            <div>
-                <div>
-                    <p>Nouveau</p>
-                    <img src="" alt="">
-                    <div>
-                        <h3>La palette du gout</h3>
-                        <p>Ménilmontant</p>
-                        <i></i>
+            <div class="boxRestaurant">
+                <a href="lapalettedugout.html">
+                    <div class="restaurant">
+                        <div class="restaurant__img">
+                            <p class="restaurant__img--nouveauLogo">Nouveau</p>
+                        </div>
+                        <div class="restaurant__desc">
+                            <div class="restaurantInfo">
+                                <h3>La palette du goût</h3>
+                                <p class="restaurantSub"></p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" class="main-stop" />
+                                    <stop offset="100%" class="alt-stop" />
+                                </linearGradient>
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg>
+                            <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg> 
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <p>Nouveau</p>
-                    <img src="" alt="">
-                    <div>
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                        <i></i>
+                </a>
+                <a href="lanoteenchantee.html">
+                    <div class="restaurant">
+                        <div class="restaurant__img">
+                            <p class="restaurant__img--nouveauLogo">Nouveau</p>
+                        </div>
+                        <div class="restaurant__desc">
+                            <div class="restaurantInfo">
+                                <h3>La note enchantée</h3>
+                                <p class="restaurantSub">Charonne</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" class="main-stop" />
+                                    <stop offset="100%" class="alt-stop" />
+                                </linearGradient>
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg>
+                            <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg> 
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <h3>A la française</h3>
-                        <p>Cité Rouge</p>
-                        <i></i>
+                </a>
+                <a href="lapalettedugout.html">
+                    <div class="restaurant">
+                        <div class="restaurant__img">
+                            <p class="restaurant__img--nouveauLogo"></p>
+                        </div>
+                        <div class="restaurant__desc">
+                            <div class="restaurantInfo">
+                                <h3>À la française</h3>
+                                <p class="restaurantSub">Cité Rouge</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" class="main-stop" />
+                                    <stop offset="100%" class="alt-stop" />
+                                </linearGradient>
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg>
+                            <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg> 
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                        <i></i>
+                </a>
+                <a href="lapalettedugout.html">
+                    <div class="restaurant">
+                        <div class="restaurant__img">
+                            <p class="restaurant__img--nouveauLogo"></p>
+                        </div>
+                        <div class="restaurant__desc">
+                            <div class="restaurantInfo">
+                                <h3>Le délice des sens</h3>
+                                <p class="restaurantSub">Folie-Méricourt</p>
+                            </div>
+                        </div>
+                        <div class="heart">
+                            <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" class="main-stop" />
+                                    <stop offset="100%" class="alt-stop" />
+                                </linearGradient>
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg>
+                            <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                            </svg> 
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
     </main>
     <footer>
        <div>
            <h1>ohmyfood</h1>
-           <div>
-                <div>
-                    <i></i>
-                    <a href="#">Proposer un retaurant</a>
-                </div>
-                <div>
-                    <i></i>
-                    <a href="#">Devenir partenaire</a>
-                </div>
-                <a href="">Mentions légales</a>
-                <a href="">Contact</a>
-           </div>
+           <ul>
+            <li>
+                <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
+            </li>
+            <li>
+                <p><i class="fas fa-hands-helping"></i> Devenir partenaire</p>
+            </li>
+            <li><p>Mentions légales</p></li>
+            <li><address><a href="mailto:#">Contact</a></address></li>
+        </ul>
        </div> 
     </footer>
 </body>
