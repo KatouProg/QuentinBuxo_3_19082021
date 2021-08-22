@@ -1,0 +1,46 @@
+header {
+    position: relative;
+    text-align: center;
+    & a {
+        color: black;
+    }
+    & .fa-arrow-left {
+        position: absolute;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: black;
+        left: 2rem;
+        top: 0.8rem;
+    }
+    & .localisation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: $color-grey2;
+        box-shadow: inset 0 2px 4px -3px $color-grey1;
+        @include tablet {
+            position: absolute;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 6rem;
+            height: 2rem;
+            width: 20rem;
+            right: 3rem;
+            top: 1.4rem;
+            p {
+                margin-top: auto;
+                margin-bottom: auto;
+                padding-top: 0.4rem;
+            }
+        }  
+        & i {
+            font-size: 1rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            @include tablet{
+                padding-left: 0;
+            }
+        }
+    }
+}
