@@ -1,0 +1,25 @@
+// ---------- Colors ----------
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-grey1: rgb(53,53,53);
+$color-grey2: lighten($color-grey1, 64%);
+$color-grey3: lighten($color-grey1, 73%);
+
+// ---------- Media Queries ----------
+
+$breakpoint:(
+    tablet:769px,
+    desktop:1025px,
+    hdscreen:1400px
+);
+
+// ---------- Imgs ----------
+
+$img-index:(
+    img1:"./media/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    img2:"./media/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+    img3:"./media/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg",
+    img4:"./media/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+);
