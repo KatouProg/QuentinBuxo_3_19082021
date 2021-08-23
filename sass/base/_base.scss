@@ -31,7 +31,6 @@ body {
 }
 
 .howToUse {
-    margin-left: 0.5rem;
     margin-bottom: 2rem;
     & h2 {
         padding-top: 22px;
@@ -52,6 +51,10 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+    & i {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
     & ol {
         list-style: none;
         counter-reset: li;
@@ -67,10 +70,10 @@ body {
             background-color:  $color-grey3;
             font-weight: bold;
             font-size: 1.1rem;
-            border-radius: map-get($radius, propal );
+            border-radius: map-get($radius, choices);
             box-shadow: 0.4rem 0.4rem 0.5rem $color-grey2, -1px -4px 4px $color-grey3;
             @include desktop {
-                min-height: 20rem;
+                min-height: 5rem;
             }
             &:hover {
                 background-color: darken($color-grey3, 6%);
@@ -79,6 +82,27 @@ body {
                     color: $color-primary;
                 }
             }
+        }
+        & li {
+            counter-increment: li;
+            cursor: pointer;
+            min-width: 30vh;
+        }
+        & i {
+            font-size: 1.2rem;
+            padding-left: 30px;
+            padding-right: 20px;
+            color: $color-grey1;
+        }
+        & li::before {
+            content: counter(li);
+            position: relative;
+            left: 1rem;
+            color: white;
+            font-size: 1.2rem;
+            padding: 0.2rem 0.6rem;
+            background-color: $color-primary;
+            border-radius: 50%;            
         }
     }
 }
