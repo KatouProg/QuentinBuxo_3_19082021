@@ -17,17 +17,18 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
+        height: 60px;
+        font-size: 1.2em;
         background-color: $color-grey2;
         box-shadow: inset 0 2px 4px -3px $color-grey1;
         @include tablet {
-            position: absolute;
+            position: relative;
             margin-top: auto;
             margin-bottom: auto;
-            margin-left: 6rem;
+            margin-left: auto;
+            margin-right: auto;
             height: 2rem;
-            width: 20rem;
-            right: 3rem;
-            top: 1.4rem;
+            width: 40rem;
             p {
                 margin-top: auto;
                 margin-bottom: auto;
@@ -36,7 +37,6 @@ header {
         }  
         & i {
             font-size: 1rem;
-            padding-left: 20px;
             padding-right: 20px;
             @include tablet{
                 padding-left: 0;
