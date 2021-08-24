@@ -3,13 +3,14 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: initial;
+  }
+
 .main {
     display: flex;
     flex-direction: column;
-    @include desktop {
-        display: grid;
-        grid-template-columns: 1.5fr 2fr 2fr;
-    }
     @include hdscreen {
         grid-template-columns: 1.5fr 3fr 3fr;
     }
@@ -22,47 +23,60 @@ body {
     color: $color-grey1;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
+
     &--tablet{
         display: none;
     }
+
     &--mobile{
         display:block;
+    }
+
+    @include desktop {
+        width: 100%;
+        height: 250px;
+        margin: 0 0 10px 0;
     }
 }
 
 .howToUse {
+    padding-left: 0;
     margin-bottom: 2rem;
+    margin: 0 auto;
+    @include desktop {
+        margin-bottom: 40px;
+    }
+
     & h2 {
         padding-top: 22px;
         margin-left: 5rem;
-    }
-    @include tablet {
-        margin-left: auto;
-        margin-right: auto;
-        & h2 {
-            padding-left: 3rem;
+        @include desktop {
+            text-align: center;
+            margin: 35px 0;
         }
     }
-    @include desktop {
-        margin-left: none;
-        margin-right: none;
-    }
-    @include tablet{
-        margin-left: auto;
-        margin-right: auto;
-    }
+
     & i {
         padding-left: 25px;
         padding-right: 25px;
     }
+
     & ol {
+        padding-left: 0;
         list-style: none;
         counter-reset: li;
         white-space: nowrap;
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+
         & p {
             display: inline-block;
+            width: 300px;
             margin: auto;
-            min-width: 80vw;
             padding-top: 1.8rem;
             padding-bottom: 1.8rem;
             margin-top: 1rem;
@@ -72,28 +86,35 @@ body {
             font-size: 1.1rem;
             border-radius: map-get($radius, choices);
             box-shadow: 0.4rem 0.4rem 0.5rem $color-grey2, -1px -4px 4px $color-grey3;
+            
             @include desktop {
                 min-height: 5rem;
             }
+
             &:hover {
-                background-color: darken($color-grey3, 6%);
+                background-color: lighten($color-primary, 33%);
                 box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+                
                 & i {
                     color: $color-primary;
                 }
             }
         }
+
         & li {
+            margin-left: auto;
+            margin-right: auto;
             counter-increment: li;
             cursor: pointer;
-            min-width: 30vh;
         }
+
         & i {
             font-size: 1.2rem;
             padding-left: 30px;
             padding-right: 20px;
             color: $color-grey1;
         }
+
         & li::before {
             content: counter(li);
             position: relative;
@@ -104,5 +125,133 @@ body {
             background-color: $color-primary;
             border-radius: 50%;            
         }
+    }
+}
+
+.imgRestaurant {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: map-get($radius,menu) map-get($radius,menu) 0 0;
+}
+.sectionRestaurant {
+    width: 25.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-grey3;
+    padding-bottom: 60px;
+
+    @include desktop {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    & h2 {
+        padding-top: 0px;
+        padding-left: 25px;
+    }
+    
+    @include tablet {
+        width: 38rem;
+        align-items: center;
+        border-radius: 25px;
+        margin-bottom: 40px;
+        box-shadow: 0.4rem 0.4rem 0.5rem $color-grey2, -1px -4px 4px $color-grey3;
+        
+        & h2{
+            padding-left: 2vh;
+        }
+    }
+    & .restaurant{
+        width: 90%;
+        min-width: 20vmax;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__img {
+            cursor: pointer;
+            position: relative;
+            margin-top: 15px;
+            width: 23rem;
+            height: 180px;
+
+            &--nouveauLogo {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                width: 90px;
+                height: 30px;
+                text-align: center;
+                line-height: 1.8;
+                color: darken($color-tertiary, 35%);
+                background-color: $color-tertiary;
+                font-weight: bold;
+                border-radius: 4px;
+            }
+        }
+
+        &__desc { 
+            width: 362px;
+            cursor: pointer;
+            position: relative;
+            border-radius: 0 0 map-get($radius,menu) map-get($radius,menu);
+            padding-top: 0.6rem;
+            padding-bottom: 0.1rem;
+            margin-bottom: 10px;
+            padding-left: 7px;
+            background-color: white;
+            font-size: 1.2rem;
+            box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+
+            & h3 {
+                margin-top: 5px;
+                margin-bottom: 1px;
+                color:$color-grey1;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & .restaurantSub {
+                display: flex;
+                justify-content: space-between;
+                
+                & p {
+                    margin-top: 1px;
+                    margin-bottom: 2px;
+                    margin-left: 5px;
+                    color:$color-grey1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            & .heart{
+                position: absolute;
+                right: 1.8rem;
+                top: 2rem;
+                font-size: 10px;
+                height: auto;
+            }
+            // &--arrounded {
+            //     border-radius: map-get($radius, menu);
+            //     width: 90%;
+            //     margin-left: auto;
+            //     margin-right: auto;
+            //     font-size: 1rem;
+            //     @include desktop{
+            //         max-width: 35rem;
+            //     }
+            // }
+        }        
     }
 }
