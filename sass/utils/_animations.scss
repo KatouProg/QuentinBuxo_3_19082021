@@ -13,3 +13,13 @@
       transition: all 1200ms ease-in-out;
       }
   }
+
+  .restaurant {
+    transition: 400ms ease-in-out;
+  
+  &:hover {
+    @include desktop {
+    transform: scale(1.1);
+    }
+  }
+}
