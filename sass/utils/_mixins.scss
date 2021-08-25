@@ -5,6 +5,11 @@
         @content;
     };
 }
+@mixin intermediate {
+    @media all and (min-width: map-get($breakpoint, intermediate)){
+        @content;
+    };
+}
 @mixin desktop {
     @media all and (min-width: map-get($breakpoint, desktop)){
         @content;

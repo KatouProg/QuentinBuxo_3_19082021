@@ -11,8 +11,8 @@ a {
 .main {
     display: flex;
     flex-direction: column;
-    @include hdscreen {
-        grid-template-columns: 1.5fr 3fr 3fr;
+    @include desktop {
+        width: 100%;
     }
 }
 
@@ -54,6 +54,10 @@ a {
             text-align: center;
             margin: 35px 0;
         }
+        @include intermediate {
+            text-align: center;
+            margin: 35px 0;
+        }
     }
 
     & i {
@@ -70,6 +74,13 @@ a {
         @include desktop {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 20px;
+        }
+
+        @include intermediate {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 20px;
         }
     
 
@@ -88,7 +99,7 @@ a {
             box-shadow: 0.4rem 0.4rem 0.5rem $color-grey2, -1px -4px 4px $color-grey3;
             
             @include desktop {
-                min-height: 5rem;
+                min-height: 1.8rem;
             }
 
             &:hover {
@@ -142,21 +153,51 @@ a {
     flex-direction: column;
     background-color: $color-grey3;
     padding-bottom: 60px;
+    
+    @include intermediate {
+        min-width: 100%;
+        height:fit-content;
+        margin: 2px 0;
+    }
+    
     @include desktop {
         min-width: 100%;
         height: 500px;
         border-radius: 0px;
         margin: 0;
         padding: 0;
+        box-shadow: none;
     }
 
     & .boxRestaurant {
-    @include desktop {
-        width: 100%;
+
+        @include intermediate{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include desktop {
+        width: auto;
+        min-height: auto;
         margin: 0;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: none;
+        grid-column-gap: none;
     }
+
+    & a {
+        @include intermediate {
+            padding: 2px 40px;
+        }
+
+        @include desktop {
+            margin: 0 10px;
+            padding: 0;
+        }
+    }
+
     }
 
     & h2 {
@@ -174,7 +215,10 @@ a {
         & h2{
             padding-left: 2vh;
         }
+
     }
+    
+
     & .restaurant{
         width: 90%;
         min-width: 20vmax;
@@ -202,7 +246,7 @@ a {
                 border-radius: 4px;
             }
         }
-
+        
         &__desc { 
             width: 362px;
             cursor: pointer;
