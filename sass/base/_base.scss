@@ -215,11 +215,10 @@ a {
         & h2{
             padding-left: 2vh;
         }
-
     }
     
 
-    & .restaurant{
+    & .restaurant {
         width: 90%;
         min-width: 20vmax;
         margin-left: auto;
@@ -295,7 +294,7 @@ a {
                 font-size: 10px;
                 height: auto;
             }
-
+        }
             &--round {
                 border-radius: map-get($radius, menu);
                 width: 90%;
@@ -308,4 +307,3 @@ a {
             }    
         }        
     }
-}
