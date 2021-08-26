@@ -295,16 +295,17 @@ a {
                 font-size: 10px;
                 height: auto;
             }
-            // &--arrounded {
-            //     border-radius: map-get($radius, menu);
-            //     width: 90%;
-            //     margin-left: auto;
-            //     margin-right: auto;
-            //     font-size: 1rem;
-            //     @include desktop{
-            //         max-width: 35rem;
-            //     }
-            // }
+
+            &--round {
+                border-radius: map-get($radius, menu);
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1rem;
+                @include desktop {
+                    max-width: 35rem;
+                }
+            }    
         }        
     }
 }
