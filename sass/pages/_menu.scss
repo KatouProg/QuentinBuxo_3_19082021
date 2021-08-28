@@ -14,29 +14,26 @@ main {
     & #imgResto2 {
         width: 100%;
         height: 20rem;
-        height: auto;
         object-fit: cover;
     }
 
     & #imgResto3 {
         width: 100%;
         height: 20rem;
-        height: auto;
         object-fit: cover;
     }
 
     & #imgResto4 {
         width: 100%;
         height: 20rem;
-        height: auto;
         object-fit: cover;
     }
 
     & .plat {
         width: 412px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
+        height: 50px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
         cursor: pointer;
         border-radius: map-get($radius,menu);
         padding: 1rem;
@@ -46,6 +43,14 @@ main {
         box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
         overflow: hidden;
 
+        @include intermediate {
+            width: 600px;
+        }
+
+        @include desktop {
+            width: 412px;
+        }
+
         & h3 {
             margin: 0;
             white-space: nowrap;
@@ -54,17 +59,17 @@ main {
         }
 
         & .subtitle {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-        }
+            margin-top: -13px;
 
-        & .price {
-            font-weight: bold;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            padding-left: 0.5rem;
+            & .price {
+                font-weight: bold;
+                text-align: right;
+            }
         }
     }
 
@@ -74,8 +79,10 @@ main {
         flex-wrap: wrap;
         overflow: hidden;
         align-items: baseline;
+        justify-content: center;
         box-sizing: border-box;
         width: 100%;
+        min-width: 100%;
         height: auto;
         margin-top: -5em;
         background-color: $color-grey3;
@@ -85,9 +92,7 @@ main {
             font-family: $font-logo;
             font-size: 2em;
             font-weight: normal;
-            padding-left: 20px;
-            padding-bottom: 0px;
-            padding-top: 12px
+            margin: 20px 10px;
         }
 
         & .heart {
@@ -102,6 +107,33 @@ main {
 
     & section {
         margin-bottom: 40px;
+        
+        & .container {
+            @include tablet {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+            }
+    
+            @include intermediate {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                padding-bottom: 20px;
+            }
+            
+            @include desktop {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+                padding-bottom: 20px;
+            }
+        }
+
+        & .menus {
+            margin: 20px auto 0;
+        }
     }
 
     & .recipeType {

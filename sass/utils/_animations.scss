@@ -1,3 +1,5 @@
+// Heart Animation
+
 .fa-heart {	
     display:flex;
       font-size: 3em;
@@ -14,6 +16,9 @@
       }
   }
 
+
+// Hover Animation
+
   .restaurant {
     transition: 400ms ease-in-out;
   
@@ -21,6 +26,24 @@
     @include desktop {
     transform: scale(1.08);
     }
+  }
+}
+
+.plat {
+  transition: 400ms ease-in-out;
+  
+  &:hover {
+    @include desktop {
+    transform: scale(1.08);
+    background-color: lighten($color-primary, 33%);
+    box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+    }
+    
+    @include intermediate {
+      transform: scale(1.08);
+      background-color: lighten($color-primary, 33%);
+      box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+      }
   }
 }
 

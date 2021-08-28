@@ -10,13 +10,14 @@ header {
 
     & h1 {
         @include desktop {
-            margin: 0 60% 0 40px;
+            margin: 0 68% 0 80px;
         }
     }
 
     & a {
         color: black;
     }
+
     & .fa-arrow-left {
         position: absolute;
         cursor: pointer;
@@ -25,6 +26,7 @@ header {
         left: 2rem;
         top: 0.8rem;
     }
+
     & .localisation {
         display: flex;
         justify-content: center;
