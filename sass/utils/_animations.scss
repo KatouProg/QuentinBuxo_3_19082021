@@ -19,12 +19,31 @@
 
 // Hover Animation
 
+
+  .button {
+    transition: 400ms ease-in-out;
+  
+  &:hover {
+    @include desktop {
+    transform: scale(1.08);
+    }
+    
+    @include intermediate {
+      transform: scale(1.08);
+    }
+  }
+}
+
   .restaurant {
     transition: 400ms ease-in-out;
   
   &:hover {
     @include desktop {
     transform: scale(1.08);
+    }
+
+    @include intermediate {
+      transform: scale(1.08);
     }
   }
 }
@@ -54,6 +73,10 @@
     &:hover{
       @include desktop {
         transform: scale(1.05);
+    }
+
+    @include intermediate {
+      transform: scale(1.05);
     }
   }
 }
@@ -92,7 +115,19 @@
 .loader{
   position: relative;
   width: 40%;
+
+  @include tablet{
+    width: 20%;
+  }
   
+  @include intermediate {
+    width: 17%;
+  }
+
+  @include desktop {
+    width: 15%;
+  }
+
   &:before{
     content: "";
     padding-top: 100%;
@@ -110,13 +145,21 @@
     margin-top: -10px;
 
     @include tablet {
-      font-size: 5rem;
-      margin-top: -50px;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include intermediate {
+      font-size: 2.5rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @include desktop {
-      margin-top: -130px;
-      font-size: 5rem;
+      font-size: 2.7rem;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

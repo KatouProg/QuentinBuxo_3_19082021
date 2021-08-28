@@ -21,8 +21,7 @@ a {
     text-align: center;
     line-height: 1.5em;
     color: $color-grey1;
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
+    padding: 2.5em 0.5em;
 
     &--tablet{
         display: none;
@@ -49,7 +48,7 @@ a {
 
     & h2 {
         padding-top: 22px;
-        margin-left: 5rem;
+        margin-left: 1rem;
         @include desktop {
             text-align: center;
             margin: 35px 0;

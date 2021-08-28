@@ -6,10 +6,12 @@ header {
         flex-direction: row;
         height: 80px;
         align-items: baseline;
+        padding-top: 20px;
     }
 
     & h1 {
         @include desktop {
+            font-size: 2.3rem;
             margin: 0 68% 0 80px;
         }
     }
@@ -25,6 +27,9 @@ header {
         color: black;
         left: 2rem;
         top: 0.8rem;
+        @include desktop {
+            top: 2.1rem;   
+        }
     }
 
     & .localisation {
@@ -46,6 +51,7 @@ header {
             width: 200px;
             height: 35px;
             font-size: 1em;
+            border-radius: 10px;
         } 
 
         & i {

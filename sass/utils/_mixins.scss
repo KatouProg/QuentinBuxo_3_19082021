@@ -1,10 +1,5 @@
 // ---------- Media Queries ----------
 
-@mixin smallscr {
-    @media all and (min-width: map-get($breakpoint, smallscr)){
-        @content;
-    };
-}
 @mixin tablet {
     @media all and (min-width: map-get($breakpoint, tablet)){
         @content;
