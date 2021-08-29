@@ -1,6 +1,7 @@
 header {
     position: relative;
     text-align: center;
+
     @include desktop {
         display: flex;
         flex-direction: row;
@@ -10,6 +11,8 @@ header {
     }
 
     & h1 {
+        margin: 10px auto;
+        
         @include desktop {
             font-size: 2.3rem;
             margin: 0 68% 0 80px;
@@ -45,6 +48,10 @@ header {
                 margin-top: auto;
                 margin-bottom: auto;
                 padding-top: 0.4rem;
+
+                @include desktop {
+                    padding-bottom: 3px;
+                }
         }
         
         @include desktop {

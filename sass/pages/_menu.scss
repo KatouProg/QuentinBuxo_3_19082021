@@ -5,6 +5,10 @@ html {
 
 main {
 
+    &.menuPage {
+        margin: 0px;
+    }
+
     & #imgResto1 {
         width: 100%;
         height: 21rem;
@@ -108,7 +112,6 @@ main {
     }
 
     & section {
-        margin-bottom: 40px;
         
         & .container {
             @include tablet {

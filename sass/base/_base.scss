@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
 }
 
 a {
@@ -11,6 +11,7 @@ a {
 .main {
     display: flex;
     flex-direction: column;
+    width: 100%;
     @include desktop {
         width: 100%;
     }
@@ -169,6 +170,7 @@ a {
     }
 
     & .boxRestaurant {
+        width: fit-content;
 
         @include intermediate{
             display: grid;
