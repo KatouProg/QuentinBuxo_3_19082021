@@ -40,14 +40,15 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 60px;
+        height: 50px;
+        color: $color-grey1;
         font-size: 1.2em;
         background-color: $color-grey2;
         box-shadow: inset 0 2px 4px -3px $color-grey1;
             p {
                 margin-top: auto;
                 margin-bottom: auto;
-                padding-top: 0.4rem;
+                padding-top: 0.2rem;
 
                 @include desktop {
                     padding-bottom: 3px;

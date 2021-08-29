@@ -22,7 +22,7 @@ a {
     text-align: center;
     line-height: 1.5em;
     color: $color-grey1;
-    padding: 2.5em 0.5em;
+    padding: 3em 0.5em;
 
     &--tablet{
         display: none;
@@ -43,6 +43,11 @@ a {
     padding-left: 0;
     margin-bottom: 2rem;
     margin: 0 auto;
+
+    @include intermediate {
+        margin-bottom: 60px;
+    }
+
     @include desktop {
         margin-bottom: 40px;
     }
@@ -50,11 +55,17 @@ a {
     & h2 {
         padding-top: 22px;
         margin-left: 1rem;
-        @include desktop {
+
+        @include tablet {
+            text-align: center;
+        }
+
+        @include intermediate {
             text-align: center;
             margin: 35px 0;
         }
-        @include intermediate {
+
+        @include desktop {
             text-align: center;
             margin: 35px 0;
         }
@@ -216,6 +227,11 @@ a {
         
         & h2{
             padding-left: 2vh;
+
+            @include intermediate {
+                padding-left: 0px;
+                margin: 40px 0;
+            }
         }
     }
     
@@ -249,7 +265,7 @@ a {
         }
         
         &__desc { 
-            width: 97.8%;
+            width: 98.6%;
             cursor: pointer;
             position: relative;
             border-radius: 0 0 map-get($radius,menu) map-get($radius,menu);
