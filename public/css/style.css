@@ -82,7 +82,7 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
 }
 
 @keyframes spinnerOpacity {
-  0%, 80% {
+  0%, 85% {
     opacity: 1;
   }
   100% {
@@ -137,7 +137,7 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
 .loader h1 {
   text-align: center;
   font-size: 2rem;
-  margin-top: -10px;
+  margin-left: -12px;
 }
 @media all and (min-width: 769px) {
   .loader h1 {
@@ -177,6 +177,67 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
   }
   100% {
     clip-path: inset(100% 0 0 0 0);
+  }
+}
+.menus {
+  -webkit-animation: menus 1.2s ease-in-out both;
+  animation: menus 1.2s ease-in-out both;
+}
+.menus:nth-child(1) {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+.menus:nth-child(2) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+.menus:nth-child(3) {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6;
+}
+.menus:nth-child(4) {
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+}
+
+@-webkit-keyframes menus {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes menus {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
   }
 }
 body {
@@ -752,14 +813,14 @@ main .menu {
 main .menu h2 {
   font-family: "Shrikhand", cursive;
   padding-top: 15px;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: normal;
   margin: 20px 5px;
 }
 main .menu .heart {
   position: relative;
   float: right;
-  padding-left: 60px;
+  padding-left: 50px;
   font-size: 8px;
   height: auto;
 }
