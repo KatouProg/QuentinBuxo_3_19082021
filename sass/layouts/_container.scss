@@ -2,11 +2,7 @@
     @include tablet{
         display:grid;
         grid-template-columns: repeat(2,1fr);
-    }
-    @include hdscreen {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    }
+    } 
     &--menuDesc{
         & .menus{
             margin-bottom:3rem;
