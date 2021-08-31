@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
-  width: 100%;
-  height: 18rem;
-  object-fit: cover;
-}
-
 @keyframes spinnerOpacity {
   0%, 85% {
     opacity: 1;
@@ -33,22 +27,7 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
 
 .loader {
   position: relative;
-  width: 40%;
-}
-@media all and (min-width: 769px) {
-  .loader {
-    width: 20%;
-  }
-}
-@media all and (min-width: 1125px) {
-  .loader {
-    width: 17%;
-  }
-}
-@media all and (min-width: 1590px) {
-  .loader {
-    width: 15%;
-  }
+  width: 13rem;
 }
 .loader:before {
   content: "";
@@ -63,27 +42,6 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
   text-align: center;
   font-size: 2rem;
   margin-left: -12px;
-}
-@media all and (min-width: 769px) {
-  .loader h1 {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media all and (min-width: 1125px) {
-  .loader h1 {
-    font-size: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media all and (min-width: 1590px) {
-  .loader h1 {
-    font-size: 2.7rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 .loader img {
   width: 60%;
@@ -113,6 +71,7 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
 }
 .fa-heart:hover {
   background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 0px;
   opacity: 1;
@@ -238,6 +197,44 @@ main #imgResto4, main #imgResto3, main #imgResto2, main #imgResto1 {
   .howToUse li:hover {
     transform: scale(1.05);
   }
+}
+
+.restaurant__desc .plat .checkBox {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  right: 23px;
+  top: 57px;
+  height: 72.5px;
+  width: 80px;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 2px 5px 5px #d8d8d8, -2px 0 5px #d8d8d8;
+  background-color: #99e2d0;
+  transform: translateX(100%);
+  transition: transform 0.2s;
+}
+.restaurant__desc .plat .checkBox .fa-check-circle {
+  cursor: pointer;
+  margin: auto;
+  font-size: 1.6rem;
+  color: white;
+  transform: rotate(0);
+  transition: transform 0.5s;
+}
+.restaurant__desc:hover .checkBox {
+  transform: translateX(0%);
+  visibility: visible;
+}
+.restaurant__desc:hover .checkBox .fa-check-circle {
+  transform: rotate(360deg);
+}
+.restaurant__desc:hover .plat {
+  width: 70%;
+  border-radius: 0;
+}
+.restaurant__desc .plat {
+  width: 87%;
+  transition: width 0.2s;
 }
 
 body {
@@ -425,18 +422,18 @@ a {
     box-shadow: none;
   }
 }
-.sectionRestaurant .boxRestaurant {
+.sectionRestaurant__box {
   width: 100%;
 }
 @media all and (min-width: 1125px) {
-  .sectionRestaurant .boxRestaurant {
+  .sectionRestaurant__box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 }
 @media all and (min-width: 1590px) {
-  .sectionRestaurant .boxRestaurant {
+  .sectionRestaurant__box {
     width: auto;
     min-height: auto;
     margin: 0;
@@ -447,12 +444,12 @@ a {
   }
 }
 @media all and (min-width: 1125px) {
-  .sectionRestaurant .boxRestaurant a {
+  .sectionRestaurant__box a {
     padding: 2px 40px;
   }
 }
 @media all and (min-width: 1590px) {
-  .sectionRestaurant .boxRestaurant a {
+  .sectionRestaurant__box a {
     margin: 0 10px;
     padding: 0;
   }
@@ -492,7 +489,7 @@ a {
   width: 100%;
   height: 180px;
 }
-.sectionRestaurant .restaurant__img--nouveauLogo {
+.sectionRestaurant .restaurant__img .nouveauLogo {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -751,8 +748,13 @@ html {
 main.menuPage {
   margin: 0px;
 }
+main .imgResto {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
 main .plat {
-  width: 87%;
+  width: 100%;
   height: 40px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -772,7 +774,7 @@ main .plat {
 }
 @media all and (min-width: 1125px) {
   main .plat {
-    width: 600px;
+    width: 87%;
   }
 }
 @media all and (min-width: 1590px) {
@@ -787,7 +789,7 @@ main .plat h3 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .plat .subtitle {
+main .plat__subtitle {
   display: grid;
   font-size: 0.93rem;
   grid-template-columns: repeat(2, 1fr);
@@ -796,7 +798,7 @@ main .plat .subtitle {
   overflow: hidden;
   margin-top: -13px;
 }
-main .plat .subtitle .price {
+main .plat__price {
   font-weight: bold;
   text-align: right;
 }
@@ -873,7 +875,7 @@ main .recipeType span {
   font-size: 1.05rem;
   font-weight: normal;
 }
-main .recipeType .underline {
+main .recipeType__underline {
   margin-top: 2px;
   margin-bottom: 32px;
   width: 45px;

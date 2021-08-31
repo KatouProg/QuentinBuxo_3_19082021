@@ -9,24 +9,14 @@ main {
         margin: 0px;
     }
 
-    & #imgResto1 {
-        @extend %restauImg;
-    }
-
-    & #imgResto2 {
-        @extend %restauImg;
-    }
-
-    & #imgResto3 {
-        @extend %restauImg;
-    }
-
-    & #imgResto4 {
-        @extend %restauImg;
+    & .imgResto {
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
     }
 
     & .plat {
-        width: 87%;
+        width: 100%;
         height: 40px;
         display: grid;
         grid-template-rows: repeat(2, 1fr);
@@ -44,7 +34,7 @@ main {
         }
 
         @include intermediate {
-            width: 600px;
+            width: 87%;
         }
 
         @include desktop {
@@ -59,7 +49,7 @@ main {
             overflow: hidden; 
         }
 
-        & .subtitle {
+        &__subtitle {
             display: grid;
             font-size: 0.93rem;
             grid-template-columns: repeat(2, 1fr);
@@ -67,13 +57,14 @@ main {
             text-overflow: ellipsis;
             overflow: hidden;
             margin-top: -13px;
-
-            & .price {
-                font-weight: bold;
-                text-align: right;
-            }
         }
-    }
+
+        &__price {
+            font-weight: bold;
+            text-align: right;
+        }
+        }
+    
 
     & .menu {
         position: relative;
@@ -153,7 +144,7 @@ main {
             font-weight: normal;
         }
 
-        & .underline {
+        &__underline {
             margin-top: 2px;
             margin-bottom: 32px;
             width: 45px;

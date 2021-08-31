@@ -29,19 +29,19 @@
 
 .loader{
   position: relative;
-  width: 40%;
+  width: 13rem;
 
-  @include tablet{
-    width: 20%;
-  }
+  // @include tablet{
+  //   width: 20%;
+  // }
   
-  @include intermediate {
-    width: 17%;
-  }
+  // @include intermediate {
+  //   width: 17%;
+  // }
 
-  @include desktop {
-    width: 15%;
-  }
+  // @include desktop {
+  //   width: 15%;
+  // }
 
   &:before{
     content: "";
@@ -59,23 +59,23 @@
     font-size: 2rem;
     margin-left: -12px;
     
-    @include tablet {
-      margin-top: 30px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    // @include tablet {
+    //   margin-top: 30px;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    // }
 
-    @include intermediate {
-      font-size: 2.5rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    // @include intermediate {
+    //   font-size: 2.5rem;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    // }
 
-    @include desktop {
-      font-size: 2.7rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    // @include desktop {
+    //   font-size: 2.7rem;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    // }
   }
 
   img{
@@ -104,44 +104,47 @@
 
 .fa-heart {	
     display:flex;
-      font-size: 3em;
-      color:transparent;
-      -webkit-text-stroke:2px black;
-      opacity:0.3;
+    font-size: 3em;
+    color:transparent;
+    -webkit-text-stroke:2px black;
+    opacity:0.3;
       
       &:hover {
-      background:linear-gradient(#FF79DA, #9356DC);
-      -webkit-background-clip: text;
-      -webkit-text-stroke: 0px;
-      opacity:1;
-      transition: all 1200ms ease-in-out;
+        background:linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 0px;
+        opacity:1;
+        transition: all 1200ms ease-in-out;
       }
   }
 
 
 // Menu apparition
 
+// @todo Essayer de créer une boucle
+
 .menus {
+  -webkit-animation: menus 1.2s ease-in-out both;
+  animation: menus 1.2s ease-in-out both;
 
   &:nth-child(1) {
     animation-delay: 0s;
--webkit-animation-delay: 0s;
-}
+    -webkit-animation-delay: 0s;
+  }
   &:nth-child(2) {
     animation-delay: 0.3s;
--webkit-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
 
-}
+  }
   &:nth-child(3) {
     animation-delay: 0.6s;
--webkit-animation-delay: 0.6;
-}
+    -webkit-animation-delay: 0.6;
+  }
   &:nth-child(4) {
     animation-delay: 0.9s;
--webkit-animation-delay: 0.9s;
-}
-    -webkit-animation: menus 1.2s ease-in-out both;
-    animation: menus 1.2s ease-in-out both;
+    -webkit-animation-delay: 0.9s;
+  }
 }
 
 @-webkit-keyframes menus {
@@ -255,3 +258,53 @@ transition: 400ms ease-in-out;
 
 // Course Animation
 
+.restaurant__desc {
+  
+  & .plat {
+
+    & .checkBox {
+      position: absolute;
+      display: flex;
+      visibility: hidden;
+      right: 23px;
+      top: 57px;
+      height: 72.5px;
+      width: 80px;
+      border-radius: 0 map-get($radius,menu) map-get($radius,menu) 0;
+      box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
+      background-color: $color-tertiary;
+      transform: translateX(100%);
+      transition: transform 0.2s;
+
+        & .fa-check-circle {
+            cursor: pointer;
+            margin: auto;
+            font-size: 1.6rem;
+            color: white;
+            transform: rotate(0);
+            transition: transform 0.5s ;
+    }
+  }
+}
+    &:hover {
+    
+      & .checkBox {
+          transform: translateX(0%);
+          visibility: visible;
+          
+          & .fa-check-circle{
+              transform: rotate(360deg);
+          }
+      }
+
+      & .plat {
+          width: 70%;
+          border-radius: 0;
+      }
+    }
+
+    .plat {
+      width: 87%;
+      transition: width 0.2s;
+        }
+    }
