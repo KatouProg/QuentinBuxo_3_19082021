@@ -34,38 +34,42 @@ main {
         }
 
         @include intermediate {
-            width: 87%;
+            width: 700px;
         }
 
         @include desktop {
-            width: 412px;
+            width: 450px;
         }
 
         & h3 {
             margin: 0;
             font-size: 1rem;
-            white-space: nowrap;
             text-overflow: ellipsis;
-            overflow: hidden; 
+            white-space: nowrap;
+        }
+
+        & p {
+            text-overflow: ellipsis;
+            white-space: nowrap; 
         }
 
         &__subtitle {
             display: grid;
             font-size: 0.93rem;
             grid-template-columns: repeat(2, 1fr);
-            white-space: nowrap;
             text-overflow: ellipsis;
-            overflow: hidden;
+            white-space: nowrap;
             margin-top: -13px;
+
+            & .price {
+                font-weight: bold;
+                text-align: right;
+                text-overflow: ellipsis;
+                white-space:nowrap;
+            }
         }
 
-        &__price {
-            font-weight: bold;
-            text-align: right;
-            overflow: hidden;
-            white-space:nowrap;
-            text-overflow: ellipsis;
-        }
+        
         }
     
 
@@ -85,6 +89,7 @@ main {
         border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
 
         & h2 {
+            justify-content: start;
             font-family: $font-logo;
             padding-top: 15px;
             font-size: 1.7em;
@@ -104,6 +109,7 @@ main {
     & section {
         
         & .container {
+
             @include tablet {
                 width: 100%;
                 display: grid;
