@@ -78,23 +78,23 @@
   transition: all 1200ms ease-in-out;
 }
 
-.menus {
+.pageResto__menus {
   -webkit-animation: menus 1.2s ease-in-out both;
   animation: menus 1.2s ease-in-out both;
 }
-.menus:nth-child(1) {
+.pageResto__menus:nth-child(1) {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
 }
-.menus:nth-child(2) {
+.pageResto__menus:nth-child(2) {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
-.menus:nth-child(3) {
+.pageResto__menus:nth-child(3) {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6;
 }
-.menus:nth-child(4) {
+.pageResto__menus:nth-child(4) {
   animation-delay: 0.9s;
   -webkit-animation-delay: 0.9s;
 }
@@ -199,12 +199,15 @@
   }
 }
 
-.restaurant__desc .plat .checkBox {
+.plat {
+  position: relative;
+}
+.plat .checkBox {
   position: absolute;
   display: flex;
   visibility: hidden;
-  right: 23px;
-  top: 57px;
+  right: 0;
+  top: 0;
   height: 72.5px;
   width: 80px;
   border-radius: 0 1rem 1rem 0;
@@ -213,7 +216,7 @@
   transform: translateX(100%);
   transition: transform 0.2s;
 }
-.restaurant__desc .plat .checkBox .fa-check-circle {
+.plat .checkBox .fa-check-circle {
   cursor: pointer;
   margin: auto;
   font-size: 1.6rem;
@@ -221,20 +224,12 @@
   transform: rotate(0);
   transition: transform 0.5s;
 }
-.restaurant__desc:hover .checkBox {
+.plat:hover .checkBox {
   transform: translateX(0%);
   visibility: visible;
 }
-.restaurant__desc:hover .checkBox .fa-check-circle {
+.plat:hover .checkBox .fa-check-circle {
   transform: rotate(360deg);
-}
-.restaurant__desc:hover .plat {
-  width: 70%;
-  border-radius: 0;
-}
-.restaurant__desc .plat {
-  width: 87%;
-  transition: width 0.2s;
 }
 
 body {
@@ -547,18 +542,6 @@ a {
   font-size: 10px;
   height: auto;
 }
-.sectionRestaurant .restaurant--round {
-  border-radius: 1rem;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1rem;
-}
-@media all and (min-width: 1590px) {
-  .sectionRestaurant .restaurant--round {
-    max-width: 35rem;
-  }
-}
 
 h1 {
   font-family: "Shrikhand", cursive;
@@ -754,7 +737,7 @@ main .imgResto {
   object-fit: cover;
 }
 main .plat {
-  width: 100%;
+  width: 87%;
   height: 40px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -766,6 +749,7 @@ main .plat {
   font-size: 1rem;
   box-shadow: 2px 5px 5px #d8d8d8, -2px 0 5px #d8d8d8;
   overflow: hidden;
+  transition: width 0.2s;
 }
 @media all and (min-width: 769px) {
   main .plat {
