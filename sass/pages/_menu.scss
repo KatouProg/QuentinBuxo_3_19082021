@@ -89,7 +89,6 @@ main {
         border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
 
         & h2 {
-            justify-content: start;
             font-family: $font-logo;
             padding-top: 15px;
             font-size: 1.7em;
