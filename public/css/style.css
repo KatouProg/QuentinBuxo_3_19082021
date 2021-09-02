@@ -802,7 +802,6 @@ main .menu {
   border-radius: 3rem 3rem 0 0;
 }
 main .menu h2 {
-  justify-content: start;
   font-family: "Shrikhand", cursive;
   padding-top: 15px;
   font-size: 1.7em;
