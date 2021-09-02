@@ -28,7 +28,6 @@ main {
         font-size: 1rem;
         box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
         overflow: hidden;
-        transition: width 0.2s;
 
         @include tablet {
             width: 500px;
@@ -63,6 +62,9 @@ main {
         &__price {
             font-weight: bold;
             text-align: right;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow: ellipsis;
         }
         }
     
