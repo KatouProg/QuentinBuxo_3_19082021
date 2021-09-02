@@ -78,23 +78,23 @@
   transition: all 1000ms ease-in-out;
 }
 
-.pageResto__menus {
+.container .menus {
   -webkit-animation: menus 1.2s ease-in-out both;
   animation: menus 1.2s ease-in-out both;
 }
-.pageResto__menus:nth-child(1) {
+.container .menus:nth-child(1) {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
 }
-.pageResto__menus:nth-child(2) {
+.container .menus:nth-child(2) {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
-.pageResto__menus:nth-child(3) {
+.container .menus:nth-child(3) {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6;
 }
-.pageResto__menus:nth-child(4) {
+.container .menus:nth-child(4) {
   animation-delay: 0.9s;
   -webkit-animation-delay: 0.9s;
 }
@@ -140,7 +140,7 @@
   }
 }
 .button {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 @media all and (min-width: 1590px) {
   .button:hover {
@@ -154,7 +154,7 @@
 }
 
 .restaurant {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 @media all and (min-width: 1590px) {
   .restaurant:hover {
@@ -168,7 +168,7 @@
 }
 
 .plat {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 @media all and (min-width: 1590px) {
   .plat:hover {
@@ -184,7 +184,7 @@
 }
 
 .howToUse li {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 @media all and (min-width: 1590px) {
   .howToUse li:hover {
@@ -197,9 +197,13 @@
   }
 }
 
+.price {
+  transform: translateX(0%);
+  transition: transform 0.4s;
+}
+
 .plat {
   position: relative;
-  overflow: hidden;
 }
 .plat .checkBox {
   position: absolute;
@@ -221,6 +225,14 @@
   color: white;
   transform: rotate(0);
   transition: transform 0.5s;
+}
+.plat:hover .price {
+  transform: translateX(-63px);
+}
+.plat:hover p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat:hover .checkBox {
   transform: translateX(0%);
@@ -725,6 +737,35 @@ html {
   height: auto;
 }
 
+main .menu {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: baseline;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  margin-top: -5em;
+  background-color: #efefef;
+  border-radius: 3rem 3rem 0 0;
+}
+main .menu h2 {
+  font-family: "Shrikhand", cursive;
+  padding-top: 15px;
+  font-size: 1.7em;
+  font-weight: normal;
+  margin: 20px 5px;
+}
+main .menu .heart {
+  position: relative;
+  float: right;
+  padding-left: 50px;
+  font-size: 8px;
+  height: auto;
+}
 main.menuPage {
   margin: 0px;
 }
@@ -775,45 +816,13 @@ main .plat p {
 main .plat__subtitle {
   display: grid;
   font-size: 0.93rem;
-  grid-template-columns: repeat(2, 1fr);
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  grid-template-columns: 2fr 1fr;
   margin-top: -13px;
 }
 main .plat__subtitle .price {
   font-weight: bold;
   text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-main .menu {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  align-items: baseline;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 100%;
-  height: auto;
-  margin-top: -5em;
-  background-color: #efefef;
-  border-radius: 3rem 3rem 0 0;
-}
-main .menu h2 {
-  font-family: "Shrikhand", cursive;
-  padding-top: 15px;
-  font-size: 1.7em;
-  font-weight: normal;
-  margin: 20px 5px;
-}
-main .menu .heart {
-  position: relative;
-  float: right;
-  padding-left: 50px;
-  font-size: 8px;
-  height: auto;
+  margin-right: 0;
 }
 @media all and (min-width: 769px) {
   main section .container {

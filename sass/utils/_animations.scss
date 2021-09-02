@@ -90,13 +90,15 @@
   }
 
 
+//*********************************************************************
+
 // Menu apparition
 
 // @todo Essayer de créer une boucle
 
-.pageResto {
+.container {
   
-  &__menus {
+  & .menus {
   -webkit-animation: menus 1.2s ease-in-out both;
   animation: menus 1.2s ease-in-out both;
 
@@ -161,12 +163,25 @@
   }
 }
 
+//Loop doesn't work
+
+
+// @for $i from 1 through 4 {
+//   .tile {
+//     &:nth-child(#{$i}) {
+//       animation-delay: $i * (2s / 4);
+//       -webkit-animation-delay: $i * (2s / 4);
+//     }
+//   }
+// }
+
+//*********************************************************************
 
 // Hover Animation
 
 
 .button {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 
 &:hover {
   @include desktop {
@@ -180,7 +195,7 @@
 }
 
 .restaurant {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 
 &:hover {
   @include desktop {
@@ -194,7 +209,7 @@
 }
 
 .plat {
-transition: 400ms ease-in-out;
+transition: 300ms ease-in-out;
 
 &:hover {
   @include desktop {
@@ -211,7 +226,7 @@ transition: 400ms ease-in-out;
 
 .howToUse {
 & li {
-  transition: 400ms ease-in-out;
+  transition: 300ms ease-in-out;
 
   &:hover{
     @include desktop {
@@ -226,13 +241,18 @@ transition: 400ms ease-in-out;
 }
 
 
+//*********************************************************************
+
 // Course Animation
 
+.price {
+  transform: translateX(0%);
+        transition: transform 0.4s;
+}
 
 .plat {
   position: relative;
-  overflow: hidden;
-  
+
   & .checkBox {
           position: absolute;
           display: flex;
@@ -257,7 +277,14 @@ transition: 400ms ease-in-out;
       }
 
   &:hover {
-    
+    .price {
+        transform: translateX(-63px);
+    }
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; 
+    }
     .checkBox {
         transform: translateX(0%);
       

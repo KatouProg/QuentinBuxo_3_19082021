@@ -1,9 +1,45 @@
+// ********** General **********
+
 html {
     width: 100%;
     height: auto;
 }
 
 main {
+
+// ********** Restaurant section **********
+
+    & .menu {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        align-items: baseline;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        margin-top: -5em;
+        background-color: $color-grey3;
+        border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
+
+        & h2 {
+            font-family: $font-logo;
+            padding-top: 15px;
+            font-size: 1.7em;
+            font-weight: normal;
+            margin: 20px 5px;
+        }
+
+        & .heart {
+            position: relative;
+            float: right;
+            padding-left: 50px;
+            font-size: 8px;
+            height: auto;
+        }
+    }
 
     &.menuPage {
         margin: 0px;
@@ -14,6 +50,8 @@ main {
         height: 18rem;
         object-fit: cover;
     }
+
+// ********** Recipe section **********
 
     & .plat {
         width: 87%;
@@ -56,57 +94,23 @@ main {
         &__subtitle {
             display: grid;
             font-size: 0.93rem;
-            grid-template-columns: repeat(2, 1fr);
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            grid-template-columns: 2fr 1fr;
             margin-top: -13px;
 
             & .price {
                 font-weight: bold;
                 text-align: right;
-                text-overflow: ellipsis;
-                white-space:nowrap;
+                margin-right: 0;
             }
         }
 
         
         }
-    
-
-    & .menu {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        overflow: hidden;
-        align-items: baseline;
-        justify-content: center;
-        box-sizing: border-box;
-        width: 100%;
-        min-width: 100%;
-        height: auto;
-        margin-top: -5em;
-        background-color: $color-grey3;
-        border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
-
-        & h2 {
-            font-family: $font-logo;
-            padding-top: 15px;
-            font-size: 1.7em;
-            font-weight: normal;
-            margin: 20px 5px;
-        }
-
-        & .heart {
-            position: relative;
-            float: right;
-            padding-left: 50px;
-            font-size: 8px;
-            height: auto;
-        }
-    }
 
     & section {
         
+// ********** Media queries general **********
+
         & .container {
 
             @include tablet {
@@ -135,6 +139,8 @@ main {
             margin: 20px auto 0;
         }
     }
+
+// ********** Recipe type section **********
 
     & .recipeType {
         margin-left: auto;
