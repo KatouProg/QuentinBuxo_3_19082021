@@ -26,10 +26,10 @@ main {
 
         & h2 {
             font-family: $font-logo;
-            padding-top: 15px;
+            padding-top: 10px;
             font-size: 1.7em;
             font-weight: normal;
-            margin: 20px 5px;
+            margin: 20px 10px;
         }
 
         & .heart {
@@ -68,11 +68,11 @@ main {
         overflow: hidden;
 
         @include tablet {
-            width: 500px;
+            width: 700px;
         }
 
         @include intermediate {
-            width: 700px;
+            width: 300px;
         }
 
         @include desktop {
@@ -122,8 +122,8 @@ main {
     
             @include intermediate {
                 display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
                 padding-bottom: 20px;
             }
             

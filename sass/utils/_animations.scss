@@ -280,11 +280,13 @@ transition: 300ms ease-in-out;
     .price {
         transform: translateX(-63px);
     }
+
     p {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; 
     }
+
     .checkBox {
         transform: translateX(0%);
       
