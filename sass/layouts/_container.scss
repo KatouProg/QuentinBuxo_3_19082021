@@ -1,15 +1,15 @@
-.container{
-    @include tablet{
-        display:grid;
-        grid-template-columns: repeat(2,1fr);
-    } 
-    &--menuDesc{
-        & .menus{
-            margin-bottom:3rem;
-        }
-        @include desktop{
-            display:grid;
-            grid-template-columns: repeat(3,1fr);
-        }
+.container {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &--menuDesc {
+    & .menus {
+      margin-bottom: 3rem;
     }
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }

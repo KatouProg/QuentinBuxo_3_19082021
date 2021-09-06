@@ -1,168 +1,164 @@
 // ********** General **********
 
 html {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 main {
+  // ********** Restaurant section **********
 
-// ********** Restaurant section **********
+  & .menu {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: baseline;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    margin-top: -5em;
+    background-color: $color-grey3;
+    border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
 
-    & .menu {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        overflow: hidden;
-        align-items: baseline;
-        justify-content: center;
-        box-sizing: border-box;
-        width: 100%;
-        min-width: 100%;
-        height: auto;
-        margin-top: -5em;
-        background-color: $color-grey3;
-        border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
-
-        & h2 {
-            font-family: $font-logo;
-            padding-top: 10px;
-            font-size: 1.7em;
-            font-weight: normal;
-            margin: 20px 10px;
-        }
-
-        & .heart {
-            position: relative;
-            float: right;
-            padding-left: 50px;
-            font-size: 8px;
-            height: auto;
-        }
+    & h2 {
+      font-family: $font-logo;
+      padding-top: 10px;
+      font-size: 1.7em;
+      font-weight: normal;
+      margin: 20px 10px;
     }
 
-    &.menuPage {
-        margin: 0px;
+    & .heart {
+      position: relative;
+      float: right;
+      padding-left: 50px;
+      font-size: 8px;
+      height: auto;
+    }
+  }
+
+  &.menuPage {
+    margin: 0px;
+  }
+
+  & .imgResto {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+  }
+
+  // ********** Recipe section **********
+
+  & .plat {
+    width: 87%;
+    height: 40px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    cursor: pointer;
+    border-radius: map-get($radius, menu);
+    padding: 1rem;
+    margin: 1rem 8px;
+    background-color: white;
+    font-size: 1rem;
+    box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
+    overflow: hidden;
+
+    @include tablet {
+      width: 700px;
     }
 
-    & .imgResto {
-        width: 100%;
-        height: 18rem;
-        object-fit: cover;
+    @include intermediate {
+      width: 300px;
     }
 
-// ********** Recipe section **********
+    @include desktop {
+      width: 450px;
+    }
 
-    & .plat {
-        width: 87%;
-        height: 40px;
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        cursor: pointer;
-        border-radius: map-get($radius,menu);
-        padding: 1rem;
-        margin: 1rem 8px;
-        background-color: white;
-        font-size: 1rem;
-        box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
-        overflow: hidden;
+    & h3 {
+      margin: 0;
+      font-size: 1rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
 
-        @include tablet {
-            width: 700px;
-        }
+    & p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
 
-        @include intermediate {
-            width: 300px;
-        }
+    &__subtitle {
+      display: grid;
+      font-size: 0.93rem;
+      grid-template-columns: 2fr 1fr;
+      margin-top: -13px;
 
-        @include desktop {
-            width: 450px;
-        }
+      & .price {
+        font-weight: bold;
+        text-align: right;
+        margin-right: 0;
+      }
+    }
+  }
 
-        & h3 {
-            margin: 0;
-            font-size: 1rem;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        & p {
-            text-overflow: ellipsis;
-            white-space: nowrap; 
-        }
-
-        &__subtitle {
-            display: grid;
-            font-size: 0.93rem;
-            grid-template-columns: 2fr 1fr;
-            margin-top: -13px;
-
-            & .price {
-                font-weight: bold;
-                text-align: right;
-                margin-right: 0;
-            }
-        }
-
-        
-        }
-
-    & section {
-        
-// ********** Media queries general **********
-
-        & .container {
-
-            @include tablet {
-                width: 100%;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, 1fr);
-            }
+  & section {
     
-            @include intermediate {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1fr;
-                padding-bottom: 20px;
-            }
-            
-            @include desktop {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1fr;
-                padding-bottom: 20px;
-            }
-        }
+    // ********** Media queries general **********
 
-        &__menus {
-            margin: 20px auto 0;
-        }
+    & .container {
+      @include tablet {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      @include intermediate {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        padding-bottom: 20px;
+      }
+
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        padding-bottom: 20px;
+      }
     }
 
-// ********** Recipe type section **********
+    &__menus {
+      margin: 20px auto 0;
+    }
+  }
 
-    & .recipeType {
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-        @include desktop {
-            max-width: 35rem;
-        }
+  // ********** Recipe type section **********
 
-        & span {
-            text-transform: uppercase;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 1.05rem;
-            font-weight: normal;
-        }
+  & .recipeType {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    @include desktop {
+      max-width: 35rem;
+    }
 
-        &__underline {
-            margin-top: 2px;
-            margin-bottom: 32px;
-            width: 45px;
-            border-top: 3px solid $color-tertiary;
-        }
-    } 
+    & span {
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      font-weight: normal;
+    }
+
+    &__underline {
+      margin-top: 2px;
+      margin-bottom: 32px;
+      width: 45px;
+      border-top: 3px solid $color-tertiary;
+    }
+  }
 }

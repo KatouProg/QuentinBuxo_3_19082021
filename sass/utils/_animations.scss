@@ -1,21 +1,21 @@
 // Loading Spinner
 
 @keyframes spinnerOpacity {
-  0%, 85%{
-      opacity:1;
+  0%,
+  85% {
+    opacity: 1;
   }
-  100%{
-      opacity:0;
+  100% {
+    opacity: 0;
   }
-  
 }
 
-.wrapper{
-  pointer-events: none;
+.wrapper {
+  pointer-events: none; // Contenu en background non cliquable
   position: fixed;
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
   left: 0;
   z-index: 10001;
   opacity: 1;
@@ -27,219 +27,187 @@
   animation: spinnerOpacity 3s linear both;
 }
 
-.loader{
+.loader {
   position: relative;
   width: 13rem;
 
-  &:before{
+  &:before {
     content: "";
     padding-top: 100%;
     display: block;
   }
-  
-  &__animated{
-    clip-path: inset(100% 0 0 0);
+
+  &__animated {
+    clip-path: inset(100% 0 0 0); //rognage
     animation: loader 3s ease-in infinite;
   }
-  
+
   & h1 {
     text-align: center;
     font-size: 2rem;
     margin-left: -12px;
   }
 
-  img{
+  img {
     width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
-@keyframes loader{
-  0%{
-   clip-path: inset(100% 0 0 0);
+@keyframes loader {
+  0% {
+    clip-path: inset(100% 0 0 0);
   }
-  50%{
-   clip-path: inset(0 0 0 0);
+  50% {
+    clip-path: inset(0 0 0 0);
   }
-  100%{
-   clip-path: inset(100% 0 0 0 0);
+  100% {
+    clip-path: inset(100% 0 0 0 0);
   }
 }
-
 
 // Heart Animation
 
-.fa-heart {	
-    display:flex;
-    font-size: 3em;
-    color:transparent;
-    -webkit-text-stroke:2px black;
-    opacity:0.6;
-      
-      &:hover {
-        background:linear-gradient($color-secondary, $color-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-stroke: 0px;
-        opacity:1;
-        transition: all 1500ms ease-in-out;
-      }
-  }
+.fa-heart {
+  display: flex;
+  font-size: 3em;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  opacity: 0.6;
 
+  &:hover, &:focus, &:active {
+    background: linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0px;
+    opacity: 1;
+    transition: all 1500ms ease-in-out;
+  }
+}
 
 //*********************************************************************
 
 // Menu apparition
 
-// @todo Essayer de créer une boucle
-
-.container {
-  
-  &__menus {
+.container__menus {
   -webkit-animation: menus 1.2s ease-in-out both;
   animation: menus 1.2s ease-in-out both;
-
-  &:nth-child(1) {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s;
-  }
-  &:nth-child(2) {
-    animation-delay: 0.3s;
-    -webkit-animation-delay: 0.3s;
-
-  }
-  &:nth-child(3) {
-    animation-delay: 0.6s;
-    -webkit-animation-delay: 0.6;
-  }
-  &:nth-child(4) {
-    animation-delay: 0.9s;
-    -webkit-animation-delay: 0.9s;
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * (0.3s);
+      -webkit-animation-delay: $i * (0.3s);
+    }
   }
 }
-}
+
 @-webkit-keyframes menus {
   0% {
-      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-              transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(40px);
-              filter: blur(40px);
-      opacity: 0;
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
   }
   100% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
   }
 }
 
 @keyframes menus {
   0% {
-      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-              transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(40px);
-              filter: blur(40px);
-      opacity: 0;
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
   }
   100% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
   }
 }
-
-//Loop doesn't work
-
- 
-// @for $i from 1 through 4 {
-//   .menus {
-//     &:nth-child(#{$i}) {
-//       animation-delay: $i * (2s / 4);
-//       -webkit-animation-delay: $i * (2s / 4);
-//     }
-//   }
-// }
 
 //*********************************************************************
 
 // Hover Animation
 
-
 .button {
   transition: 300ms ease-in-out;
 
-&:hover {
-  @include desktop {
-  transform: scale(1.08);
+  &:hover {
+    @include desktop {
+      transform: scale(1.08);
+    }
+
+    @include intermediate {
+      transform: scale(1.08);
+    }
   }
-  
-  @include intermediate {
-    transform: scale(1.08);
-  }
-}
 }
 
 .restaurant {
   transition: 300ms ease-in-out;
 
-&:hover {
-  @include desktop {
-  transform: scale(1.08);
-  }
+  &:hover {
+    @include desktop {
+      transform: scale(1.08);
+    }
 
-  @include intermediate {
-    transform: scale(1.08);
+    @include intermediate {
+      transform: scale(1.08);
+    }
   }
-}
 }
 
 .plat {
-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 
-&:hover {
-  @include desktop {
-  background-color: lighten($color-primary, 33%);
-  box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
-  }
-  
-  @include intermediate {
-    background-color: lighten($color-primary, 33%);
-    box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+  &:hover, &:focus, &:active {
+    @include desktop {
+      background-color: lighten($color-primary, 33%);
+      box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
     }
-}
+
+    @include intermediate {
+      background-color: lighten($color-primary, 33%);
+      box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+    }
+  }
 }
 
 .howToUse {
-& li {
-  transition: 300ms ease-in-out;
+  & li {
+    transition: 300ms ease-in-out;
 
-  &:hover{
-    @include desktop {
-      transform: scale(1.05);
-  }
+    &:hover, &:focus, &:active {
+      @include desktop {
+        transform: scale(1.05);
+      }
 
-  @include intermediate {
-    transform: scale(1.05);
+      @include intermediate {
+        transform: scale(1.05);
       }
     }
   }
 }
-
 
 //*********************************************************************
 
@@ -247,52 +215,52 @@ transition: 300ms ease-in-out;
 
 .price {
   transform: translateX(0%);
-        transition: transform 0.4s;
+  transition: transform 0.4s;
 }
 
 .plat {
   position: relative;
 
   & .checkBox {
-          position: absolute;
-          display: flex;
-          right: 0;
-          top: 0;
-          height: 72.5px;
-          width: 70px;
-          border-radius: 0 map-get($radius,menu) map-get($radius,menu) 0;
-          box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
-          background-color: $color-tertiary;
-          transform: translateX(100%);
-          transition: transform 0.4s;
-    
-            & .fa-check-circle {
-                cursor: pointer;
-                margin: auto;
-                font-size: 1.6rem;
-                color: white;
-                transform: rotate(0);
-                transition: transform 0.5s ;
-        }
-      }
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    height: 72.5px;
+    width: 70px;
+    border-radius: 0 map-get($radius, menu) map-get($radius, menu) 0;
+    box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
+    background-color: $color-tertiary;
+    transform: translateX(100%);
+    transition: transform 0.4s;
+
+    & .fa-check-circle {
+      cursor: pointer;
+      margin: auto;
+      font-size: 1.6rem;
+      color: white;
+      transform: rotate(0);
+      transition: transform 0.5s;
+    }
+  }
 
   &:hover {
     .price {
-        transform: translateX(-63px);
+      transform: translateX(-63px);
     }
 
     p {
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap; 
+      white-space: nowrap;
     }
 
     .checkBox {
-        transform: translateX(0%);
-      
-        & .fa-check-circle{
-            transform: rotate(360deg);
-        }
+      transform: translateX(0%);
+
+      & .fa-check-circle {
+        transform: rotate(360deg);
+      }
     }
   }
-}  
+}

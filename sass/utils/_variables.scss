@@ -3,21 +3,21 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$color-grey1: rgb(53,53,53);
+$color-grey1: rgb(53, 53, 53);
 $color-grey2: lighten($color-grey1, 64%);
 $color-grey3: lighten($color-grey1, 73%);
 
 // ---------- Media Queries ----------
 
-$breakpoint:(
-    tablet:742px,
-    intermediate:1125px,
-    desktop:1590px,
+$breakpoint: (
+  tablet: 742px,
+  intermediate: 1125px,
+  desktop: 1590px,
 );
 
-$radius:(
-    menu: 1rem,
-    tag: 3rem,
-    btn: 10rem,
-    choices: 1.5rem
+$radius: (
+  menu: 1rem,
+  tag: 3rem,
+  btn: 10rem,
+  choices: 1.5rem,
 );

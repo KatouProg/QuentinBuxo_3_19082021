@@ -1,25 +1,25 @@
 // ---------- Buttons ----------
 
 .button {
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    max-width: 13rem;
-    padding: 0.3rem;
-    line-height: 3em;
-    border-radius: map-get($radius,btn);
-    text-align:center;
-    color: white;   
-    font-size: 1rem;
-    font-weight: 550;
-    background: linear-gradient(to top left, $color-primary 22%,$color-secondary);
-    box-shadow: 2px 8px 8px $color-grey2;
-    &:hover{
-        background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
-    }
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  max-width: 13rem;
+  padding: 0.3rem;
+  line-height: 3em;
+  border-radius: map-get($radius,btn);
+  text-align:center;
+  color: white;   
+  font-size: 1rem;
+  font-weight: 550;
+  background: linear-gradient(to top left, $color-primary 22%,$color-secondary);
+  box-shadow: 2px 8px 8px $color-grey2;
+  &:hover{
+      background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
+  }
 }
 
 .btnBackground {
-    background-color: $color-grey3;
-    padding:6px 0 50px 0;
+  background-color: $color-grey3;
+  padding:6px 0 50px 0;
 }
