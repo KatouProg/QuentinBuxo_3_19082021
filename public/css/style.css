@@ -306,7 +306,7 @@ a {
   padding-top: 22px;
   margin-left: 1rem;
 }
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   .howToUse h2 {
     text-align: center;
   }
@@ -466,7 +466,7 @@ a {
   padding-top: 0px;
   padding-left: 25px;
 }
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   .sectionRestaurant {
     width: 38rem;
     align-items: center;
@@ -478,7 +478,7 @@ a {
     padding-left: 2vh;
   }
 }
-@media all and (min-width: 742px) and (min-width: 1125px) {
+@media all and (min-width: 716px) and (min-width: 1125px) {
   .sectionRestaurant h2 {
     padding-left: 0px;
     margin: 40px 0;
@@ -664,7 +664,7 @@ header .localisation i {
   font-size: 1rem;
   padding-right: 20px;
 }
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   header .localisation i {
     padding-left: 0;
   }
@@ -677,7 +677,7 @@ footer {
   color: white;
   box-shadow: 0.4rem 0.4rem 0.5rem #d8d8d8, -1px -4px 4px #efefef;
 }
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   footer {
     width: 100%;
     align-items: center;
@@ -720,7 +720,7 @@ footer a {
   font-style: normal;
 }
 
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -792,19 +792,25 @@ main .plat {
   box-shadow: 2px 5px 5px #d8d8d8, -2px 0 5px #d8d8d8;
   overflow: hidden;
 }
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   main .plat {
-    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 }
 @media all and (min-width: 1125px) {
   main .plat {
-    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
 }
 @media all and (min-width: 1590px) {
   main .plat {
-    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
 }
 main .plat h3 {
@@ -828,7 +834,7 @@ main .plat__subtitle .price {
   text-align: right;
   margin-right: 0;
 }
-@media all and (min-width: 742px) {
+@media all and (min-width: 716px) {
   main section .container {
     width: 100%;
     display: grid;
