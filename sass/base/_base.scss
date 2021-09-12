@@ -123,6 +123,7 @@ a {
         height: 50px;
         font-size: 0.75rem;
         padding: 20px 0 0;
+        margin: 10px 0;
       }
       
       @include desktop {
@@ -149,7 +150,7 @@ a {
       cursor: pointer;
 
       @include smallscreen {
-        margin: 20px;
+        margin: 10px;
       }
     }
 
@@ -303,6 +304,10 @@ a {
       align-items: stretch;
       overflow: hidden;
 
+      @include smallscreen {
+        width: 97.75%;
+      }
+
       & h3 {
         margin-top: 5px;
         margin-bottom: 1px;
@@ -311,11 +316,20 @@ a {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include smallscreen {
+          font-size: 1.2rem;
+        }
       }
 
       & .restaurantSub {
         display: flex;
         justify-content: space-between;
+
+        @include smallscreen {
+          font-size: 1.1rem;
+          margin: 10px 0;
+        }
 
         & p {
           margin-top: 1px;
@@ -334,6 +348,10 @@ a {
         top: 2rem;
         font-size: 10px;
         height: auto;
+
+        @include smallscreen {
+          font-size: 6px;
+        }
       }
     }
   }

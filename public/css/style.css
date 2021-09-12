@@ -363,6 +363,7 @@ a {
     height: 50px;
     font-size: 0.75rem;
     padding: 20px 0 0;
+    margin: 10px 0;
   }
 }
 @media all and (min-width: 1590px) {
@@ -385,7 +386,7 @@ a {
 }
 @media all and (max-width: 355px) {
   .howToUse ol li {
-    margin: 20px;
+    margin: 10px;
   }
 }
 .howToUse ol i {
@@ -535,6 +536,11 @@ a {
   align-items: stretch;
   overflow: hidden;
 }
+@media all and (max-width: 355px) {
+  .sectionRestaurant .restaurant__desc {
+    width: 97.75%;
+  }
+}
 .sectionRestaurant .restaurant__desc h3 {
   margin-top: 5px;
   margin-bottom: 1px;
@@ -544,9 +550,20 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media all and (max-width: 355px) {
+  .sectionRestaurant .restaurant__desc h3 {
+    font-size: 1.2rem;
+  }
+}
 .sectionRestaurant .restaurant__desc .restaurantSub {
   display: flex;
   justify-content: space-between;
+}
+@media all and (max-width: 355px) {
+  .sectionRestaurant .restaurant__desc .restaurantSub {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
 }
 .sectionRestaurant .restaurant__desc .restaurantSub p {
   margin-top: 1px;
@@ -563,6 +580,11 @@ a {
   top: 2rem;
   font-size: 10px;
   height: auto;
+}
+@media all and (max-width: 355px) {
+  .sectionRestaurant .restaurant__desc .heart {
+    font-size: 6px;
+  }
 }
 
 h1 {
