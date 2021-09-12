@@ -10,6 +10,7 @@ $color-grey3: lighten($color-grey1, 73%);
 // ---------- Media Queries ----------
 
 $breakpoint: (
+  smallscreen: 355px,
   tablet: 716px,
   intermediate: 1125px,
   desktop: 1590px,

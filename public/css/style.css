@@ -357,6 +357,14 @@ a {
   border-radius: 1.5rem;
   box-shadow: 0.4rem 0.4rem 0.5rem #d8d8d8, -1px -4px 4px #efefef;
 }
+@media all and (max-width: 355px) {
+  .howToUse ol p {
+    width: 210px;
+    height: 50px;
+    font-size: 0.75rem;
+    padding: 20px 0 0;
+  }
+}
 @media all and (min-width: 1590px) {
   .howToUse ol p {
     min-height: 1.8rem;
@@ -374,6 +382,11 @@ a {
   margin-right: auto;
   counter-increment: li;
   cursor: pointer;
+}
+@media all and (max-width: 355px) {
+  .howToUse ol li {
+    margin: 20px;
+  }
 }
 .howToUse ol i {
   font-size: 1.2rem;
@@ -622,6 +635,11 @@ header .fa-arrow-left {
   left: 2rem;
   top: 0.8rem;
 }
+@media all and (max-width: 355px) {
+  header .fa-arrow-left {
+    left: 1.3rem;
+  }
+}
 @media all and (min-width: 1590px) {
   header .fa-arrow-left {
     top: 2.1rem;
@@ -759,12 +777,22 @@ main .menu h2 {
   font-weight: normal;
   margin: 20px 10px;
 }
+@media all and (max-width: 355px) {
+  main .menu h2 {
+    font-size: 1.35rem;
+  }
+}
 main .menu .heart {
   position: relative;
   float: right;
-  padding-left: 50px;
+  padding-left: 30px;
   font-size: 8px;
   height: auto;
+}
+@media all and (max-width: 355px) {
+  main .menu .heart {
+    font-size: 6px;
+  }
 }
 main.menuPage {
   margin: 0px;
@@ -787,6 +815,11 @@ main .plat {
   font-size: 1rem;
   box-shadow: 2px 5px 5px #d8d8d8, -2px 0 5px #d8d8d8;
   overflow: hidden;
+}
+@media all and (max-width: 355px) {
+  main .plat {
+    width: 83%;
+  }
 }
 @media all and (min-width: 716px) {
   main .plat {
@@ -811,13 +844,25 @@ main .plat {
 }
 main .plat h3 {
   margin: 0;
+  padding-bottom: 4px;
   font-size: 1rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media all and (max-width: 355px) {
+  main .plat h3 {
+    font-size: 0.88rem;
+  }
+}
 main .plat p {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media all and (max-width: 355px) {
+  main .plat p {
+    font-size: 0.88rem;
+  }
 }
 main .plat__subtitle {
   display: grid;
@@ -860,6 +905,7 @@ main section__menus {
 main .recipeType {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
   width: 90%;
 }
 @media all and (min-width: 1590px) {

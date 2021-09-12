@@ -29,14 +29,22 @@ main {
       font-size: 1.7em;
       font-weight: normal;
       margin: 20px 10px;
+
+      @include smallscreen {
+        font-size: 1.35rem;
+      }
     }
 
     & .heart {
       position: relative;
       float: right;
-      padding-left: 50px;
+      padding-left: 30px;
       font-size: 8px;
       height: auto;
+
+      @include smallscreen {
+        font-size: 6px;
+      }
     }
   }
 
@@ -66,6 +74,10 @@ main {
     box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
     overflow: hidden;
 
+    @include smallscreen {
+      width: 83%;
+    }
+
     @include tablet {
       margin-left: auto;
       margin-right: auto;
@@ -86,14 +98,24 @@ main {
 
     & h3 {
       margin: 0;
+      padding-bottom: 4px;
       font-size: 1rem;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      @include smallscreen {
+        font-size: 0.88rem;
+      }
     }
 
     & p {
+      overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      @include smallscreen {
+        font-size: 0.88rem;
+      }
     }
 
     &__subtitle {
@@ -147,6 +169,7 @@ main {
   & .recipeType {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
     width: 90%;
     @include desktop {
       max-width: 35rem;

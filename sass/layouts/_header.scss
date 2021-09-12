@@ -30,6 +30,11 @@ header {
     color: black;
     left: 2rem;
     top: 0.8rem;
+
+    @include smallscreen {
+      left: 1.3rem;
+    }
+
     @include desktop {
       top: 2.1rem;
     }
