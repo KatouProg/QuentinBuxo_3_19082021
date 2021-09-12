@@ -65,7 +65,7 @@
     clip-path: inset(0 0 0 0);
   }
   100% {
-    clip-path: inset(100% 0 0 0 0);
+    clip-path: inset(100% 0 0 0);
   }
 }
 
@@ -95,7 +95,7 @@
 .container__menus {
   -webkit-animation: menus 1.2s ease-in-out both;
   animation: menus 1.2s ease-in-out both;
-  @for $i from 1 through 4 {
+  @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
       animation-delay: $i * (0.3s);
       -webkit-animation-delay: $i * (0.3s);

@@ -210,8 +210,8 @@ a {
       margin: 0;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-row-gap: none;
-      grid-column-gap: none;
+      grid-row-gap:unset;
+      grid-column-gap: unset;
     }
 
     & a {
